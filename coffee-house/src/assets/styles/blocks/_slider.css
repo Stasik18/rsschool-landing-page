@@ -9,7 +9,7 @@
   .sliderHeader {
     font: var(--font-h2);
 
-    & span {
+    & em {
       color: var(--color-text-accent);
       font: var(--font-h2-accent);
     }

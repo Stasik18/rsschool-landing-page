@@ -15,7 +15,7 @@
     color: var(--color-text-inverse);
     font: var(--font-h1-accent);
 
-    & span {
+    & em {
       color: var(--color-text-accent);
     }
   }

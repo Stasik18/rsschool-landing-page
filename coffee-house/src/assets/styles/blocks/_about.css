@@ -10,7 +10,7 @@
     font: var(--font-h2);
     letter-spacing: -0.004em;
 
-    & span {
+    & em {
       color: var(--color-text-accent);
       font: var(--font-h2-accent);
     }
