@@ -4,3 +4,5 @@
 @import 'layout.css';
 @import 'utils.css';
 @import './blocks/_header.css';
+@import './blocks/_hero.css';
+@import './blocks/_slider.css';
