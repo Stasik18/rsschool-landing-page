@@ -123,7 +123,7 @@
       </div>
     </header>
     <main>
-      <section class="hero">
+      <section class="heroSection">
         <h1 class="title"><span>Enjoy</span> premium coffee at our charming cafe</h1>
         <p class="about">With its inviting atmosphere and delicious coffee options, the Coffee House Resource is a
           popular
@@ -149,7 +149,48 @@
           </svg>
         </button>
       </section>
+      <section class="sliderSection">
+        <h2 class="sliderHeader">Choose your <span>favorite</span> coffee</h2>
+        <div class="sliderWrapper">
+          <button class="sliderButton sliderButtonPrev  ease-transition">
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M18.5 12H6M12 18L6 12L12 6" stroke="currentColor" stroke-linecap="round"
+                stroke-linejoin="round" />
+            </svg>
 
+          </button>
+          <div class="sliderTrak">
+            <article class="slide active">
+              <img class="slidePictures" width="480" height="480" src=" ./src/assets/img/cap.png"
+                alt="Освежающий капучино">
+              <div class="slideInfo">
+                <h3 class="slideInfoHeader">S’mores Frappuccino</h3>
+                <p class="slideInfoAbout">This new drink takes an espresso and mixes it with brown sugar and cinnamon
+                  before being topped with
+                  oat
+                  milk.</p>
+                <p class="slideInfoPrice">$5.50</p>
+              </div>
+
+            </article>
+
+          </div>
+          <button class="sliderButton sliderButtonNext  ease-transition">
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M6 12H18.5M12.5 18L18.5 12L12.5 6" stroke="currentColor" stroke-linecap="round"
+                stroke-linejoin="round" />
+            </svg>
+          </button>
+        </div>
+
+        <nav class="sliderPagination">
+          <ul class="lineList">
+            <li><button class="line active"></button></li>
+            <li><button class="line"></button></li>
+            <li><button class="line"></button></li>
+          </ul>
+        </nav>
+      </section>
 
     </main>
 
