@@ -9,3 +9,7 @@
 @import './blocks/_about.css';
 @import './blocks/_app.css';
 @import './blocks/_footer.css';
+
+html {
+  scroll-behavior: smooth;
+}

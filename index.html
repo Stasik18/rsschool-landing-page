@@ -14,7 +14,8 @@
 <body>
   <div class="mainWrapper">
     <header class="header">
-      <a class="logo" href="#"> <svg viewBox="0 0 690 414" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <a class="logo" href="index.html">
+        <svg viewBox="0 0 690 414" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path
             d="M476.1 172.5C476.1 244.905 417.405 303.6 345 303.6C272.596 303.6 213.9 244.905 213.9 172.5C213.9 100.095 272.596 41.4 345 41.4C417.405 41.4 476.1 100.095 476.1 172.5Z"
             fill="#B0907A" />
@@ -77,10 +78,10 @@
 
       <nav class="navigation">
         <ul class="navigationList">
-          <li class="item item-1 ease-transition"><a href="#">Favorite coffee</a></li>
-          <li class="item item-2 ease-transition"><a href="#">About</a></li>
-          <li class="item item-3 ease-transition"><a href="#">Mobile app</a></li>
-          <li class="item item-4 ease-transition"><a href="#">Contact us</a></li>
+          <li class="item item-1 ease-transition"><a href="#slider-section">Favorite coffee</a></li>
+          <li class="item item-2 ease-transition"><a href="#about-section">About</a></li>
+          <li class="item item-3 ease-transition"><a href="#app-section">Mobile app</a></li>
+          <li class="item item-4 ease-transition"><a href="#contact-us">Contact us</a></li>
         </ul>
       </nav>
 
@@ -124,7 +125,12 @@
     </header>
     <main>
       <section class="heroSection">
-        <h1 class="title"><em>Enjoy</em> premium coffee at our charming cafe</h1>
+        <video class="heroSectionVideo" autoplay muted loop playsinline>
+          <source src="./src/assets/video/1080_24fps.webm" type="video/webm">
+          <source src="./src/assets/video/720_24fps.webm" type="video/webm" media="(max-width: 768px)">
+        </video>
+
+        <h1 class=" title"><em>Enjoy</em> premium coffee at our charming cafe</h1>
         <p class="about">With its inviting atmosphere and delicious coffee options, the Coffee House Resource is a
           popular
           destination
@@ -149,7 +155,7 @@
           </svg>
         </button>
       </section>
-      <section class="sliderSection">
+      <section id="slider-section" class="sliderSection">
         <h2 class="sliderHeader">Choose your <em>favorite</em> coffee</h2>
         <div class="sliderWrapper">
           <button class="sliderButton sliderButtonPrev  ease-transition">
@@ -191,7 +197,7 @@
           </ul>
         </nav>
       </section>
-      <section class="aboutSection">
+      <section id="about-section" class="aboutSection">
         <h2 class="aboutSectionHeader">Resource is <em>the perfect and cozy place</em> where you can enjoy a variety
           of hot beverages, relax, catch up with friends, or get some work done.</h2>
         <div class="aboutSectionWrapper">
@@ -206,7 +212,7 @@
           </div>
         </div>
       </section>
-      <section class="appSection">
+      <section id="app-section" class="appSection">
         <div class="appSectionInfo">
           <h2 class="appSectionHeader"><em>Download</em> our app<br>to start ordering</h2>
           <p class="appSectionAbout">Download the Resource app today and experience the comfort of ordering your
@@ -261,7 +267,7 @@
           <img class="phone" src="./src/assets/img/mobile-screens.png" alt="Мобильное приложение">
         </div>
       </section>
-      <footer class="footer">
+      <footer id="contact-us" class="footer">
         <div class="footerLeft">
           <h2 class="footerHeader"><span>Sip, Savor, Smile.</span><em> It’s coffee time!</em></h2>
           <ul class="footerSocial">
@@ -315,7 +321,7 @@
                   d="M10.0003 9.16667C10.4606 9.16667 10.8337 8.79357 10.8337 8.33333C10.8337 7.8731 10.4606 7.5 10.0003 7.5C9.54009 7.5 9.16699 7.8731 9.16699 8.33333C9.16699 8.79357 9.54009 9.16667 10.0003 9.16667Z"
                   fill="#E1D4C9" stroke="#E1D4C9" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
               </svg>
-              <a class="footerContactsLink " href="#">8558 Green Rd., LA</a>
+              <a class="footerContactsLink " href="#">8558 Green Rd., LA</a> <!-- поправить ссылку!!!!!!!!!! -->
             </li>
             <li class="footerContactsItem ease-transition">
               <svg class="footerContactsIcon" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
