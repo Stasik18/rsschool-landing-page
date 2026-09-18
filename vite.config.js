@@ -5,6 +5,9 @@ import { fileURLToPath } from 'node:url'
 const __dirname = path.dirname(fileURLToPath(import.meta.url))
 
 export default defineConfig({
+  build: {
+    sourcemap: true,
+  },
   base: '/rsschool-landing-page/',
   resolve: {
     alias: {
