@@ -1,14 +1,10 @@
-@import 'fonts.css';
-@import 'reset.css';
-@import 'variables.css';
-@import 'layout.css';
-@import 'utils.css';
-@import './blocks/_header.css';
-@import './blocks/_hero.css';
-@import './blocks/_slider.css';
-@import './blocks/_about.css';
-@import './blocks/_app.css';
-@import './blocks/_footer.css';
+@import './general/fonts.css';
+@import './general/reset.css';
+@import './general/variables.css';
+@import './general/layout.css';
+@import './general/utils.css';
+@import './general/_header.css';
+@import './general/_footer.css';
 
 html {
   scroll-behavior: smooth;
