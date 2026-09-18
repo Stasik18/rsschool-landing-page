@@ -1,0 +1,39 @@
+:root {
+  --transition-duration: 0.2s;
+  --transition-duration-long: 0.4s;
+  --transition-timing: ease;
+
+  --color-text-primary: #403f3d;
+  --color-text-inverse: #e1d4c9;
+  --color-text-accent: #b0907a;
+  --color-bg-page: #e1d4c9;
+  --color-bg-container: #665f55;
+  --color-bg-overlay: rgba(64, 63, 61, 0.8);
+  --color-border-primary: #c1b6ad;
+  --color-border-inverse: #665f55;
+
+  --font-h1: 600 72px/105% 'Inter', sans-serif;
+  --font-h1-accent: italic 600 72px/105% 'Inter', sans-serif;
+  --font-h2: 600 60px/125% 'Inter', sans-serif;
+  --font-h2-accent: italic 600 60px/125% 'Inter', sans-serif;
+  --font-h3: 600 24px/125% 'Inter', sans-serif;
+  --font-body-medium: 400 16px/150% 'Inter', sans-serif;
+  --font-caption: 600 10px/140% 'Inter', sans-serif;
+  --font-action: 600 16px/150% 'Inter', sans-serif;
+  --font-burger: 600 32px/125% 'Inter', sans-serif;
+  --font-h1-m: 600 42px/115% 'Inter', sans-serif;
+  --font-h2-m: 600 32px/125% 'Inter', sans-serif;
+}
+
+[data-theme='dark'] {
+  --color-text-primary: #e1d4c9;
+  --color-text-inverse: #e1d4c9;
+  --color-text-accent: #b0907a;
+
+  --color-bg-page: #292826;
+  --color-bg-container: #403f3d;
+  --color-bg-overlay: rgba(41, 40, 38, 0.8);
+
+  --color-border-primary: #665f55;
+  --color-border-inverse: #c1b6ad;
+}

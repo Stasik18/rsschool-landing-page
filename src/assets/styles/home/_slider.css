@@ -1,0 +1,98 @@
+.sliderSection {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  margin-bottom: 100px;
+
+  .sliderHeader {
+    font: var(--font-h2);
+
+    & em {
+      color: var(--color-text-accent);
+      font: var(--font-h2-accent);
+    }
+  }
+
+  .sliderWrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+    width: 100%;
+
+    .sliderButton {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border: 1px solid var(--color-border-primary);
+      border-radius: 100px;
+      background-color: transparent;
+      width: 60px;
+      height: 60px;
+      cursor: pointer;
+
+      &:hover {
+        background-color: var(--color-border-inverse);
+        color: var(--color-text-inverse);
+      }
+      & svg {
+        width: 24px;
+        height: 24px;
+      }
+    }
+
+    .sliderTrak {
+      .slide {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        gap: 20px;
+        width: 480px;
+
+        .slidePictures {
+        }
+
+        .slideInfo {
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          align-items: center;
+          gap: 16px;
+
+          .slideInfoHeader {
+            font: var(--font-h3);
+          }
+
+          .slideInfoAbout {
+            font: var(--font-body-medium);
+            text-align: center;
+          }
+
+          .slideInfoPrice {
+            font: var(--font-h3);
+          }
+        }
+      }
+    }
+  }
+
+  .sliderPagination {
+    .lineList {
+      display: flex;
+      gap: 12px;
+      .line {
+        height: 4px;
+        width: 40px;
+        border-radius: 100px;
+        background-color: var(--color-border-primary);
+      }
+
+      .active {
+        background-color: var(--color-bg-container);
+      }
+    }
+  }
+}

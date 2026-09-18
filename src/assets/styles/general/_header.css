@@ -1,0 +1,143 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  .logo {
+    width: 100px;
+    height: 60px;
+  }
+
+  .navigation {
+    display: flex;
+    flex: 1;
+    justify-content: center;
+
+    .navigationList {
+      display: flex;
+      gap: 40px;
+      font: var(--font-action);
+
+      .item {
+        position: relative;
+
+        &::after {
+          content: '';
+          position: absolute;
+          left: 0;
+          bottom: 0;
+          width: 100%;
+          height: 2px;
+          background: currentColor;
+          transform: scaleX(0);
+          transform-origin: left;
+        }
+
+        &:hover::after {
+          transform: scaleX(1);
+        }
+      }
+    }
+  }
+  .headerActions {
+    display: flex;
+    gap: 24px;
+    align-items: center;
+
+    .themeSwitcher {
+      position: relative;
+      display: flex;
+      width: 88px;
+      height: 44px;
+      align-items: center;
+      background-color: transparent;
+      justify-content: center;
+      gap: 8px;
+      border: 1px solid var(--color-border-primary);
+      border-radius: 100px;
+      cursor: pointer;
+
+      .sunWrapper,
+      .moonWrapper {
+        width: 36px;
+        height: 36px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 100px;
+        position: relative;
+        z-index: 10;
+      }
+
+      .sunWrapper {
+        .sun {
+          width: 22px;
+          height: 22px;
+        }
+      }
+
+      .moonWrapper {
+        .moon {
+          width: 18px;
+          height: 18px;
+        }
+      }
+
+      .themeSwitcherBackground {
+        background-color: var(--color-text-accent);
+        width: 36px;
+        height: 36px;
+        left: 3px;
+        border-radius: 100px;
+
+        position: absolute;
+        z-index: -1;
+      }
+    }
+
+    .menu {
+      position: relative;
+      display: flex;
+      gap: 8px;
+      font: var(--font-action);
+      background: transparent;
+      cursor: pointer;
+
+      &::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height: 2px;
+        background: currentColor;
+        transform: scaleX(0);
+        transform-origin: left;
+      }
+
+      &:hover::after {
+        transform: scaleX(1);
+      }
+
+      .coffeeCup {
+        width: 20px;
+        height: 20px;
+      }
+    }
+  }
+}
+
+[data-theme='light'] .themeSwitcherBackground {
+  transform: translateX(0);
+}
+[data-theme='dark'] .themeSwitcherBackground {
+  transform: translateX(44px);
+}
+
+[data-theme='light'] .themeSwitcher:hover .moonWrapper {
+  background-color: var(--color-border-inverse);
+}
+
+[data-theme='dark'] .themeSwitcher:hover .sunWrapper {
+  background-color: var(--color-border-inverse);
+}
