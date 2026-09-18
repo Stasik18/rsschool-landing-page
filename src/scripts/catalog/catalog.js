@@ -1,5 +1,5 @@
 import '@/assets/styles/catalog.css'
-import '@/assets/styles/global.css'
+
 import { categories, menuItems } from '../../constant/data'
 
 const tabsList = document.querySelector('.menuTabsList')

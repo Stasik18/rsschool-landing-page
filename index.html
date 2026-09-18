@@ -1,7 +1,16 @@
 <!doctype html>
-<html lang="ru"><!--  сайт-то англ, нужно альты переписать на англ и тут поменять -->
+<html lang="ru" data-theme="light">
+<!--  сайт-то англ, нужно альты переписать на англ и тут поменят, константы с большой буквы! -->
+
 
 <head>
+  <script>
+    (function () {
+      const saved = localStorage.getItem('theme');
+      const theme = saved || (matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+      document.documentElement.dataset.theme = theme;
+    })();
+  </script>
   <meta charset="UTF-8" />
   <meta name="description" content="кофейня" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -370,7 +379,9 @@
     </footer>
 
 
-  </div>
+  </div>|
+
+  <script type="module" src="./src/scripts/main.js"></script>
   <script type="module" src="./src/scripts/home/home.js"></script>
 </body>
 
