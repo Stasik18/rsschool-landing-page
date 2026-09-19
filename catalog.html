@@ -1,5 +1,9 @@
 <!doctype html>
-<html lang="ru" data-theme="light"><!--  сайт-то англ, нужно альты переписать на англ и тут поменять -->
+<html lang="ru" data-theme="light" data-page="catalog">
+<!--  сайт-то англ, нужно альты переписать на англ и тут поменять 
+в каталоге ссылки должны вести на другую страницу и друго раздел  
+синхронизировать перезагрузку страницы, если были на чая чтобы остался чай
+-->
 
 <head>
 
@@ -109,9 +113,9 @@
                         </svg></span>
 
 
-                    <span class="themeSwitcherBackground"></span>
+                    <span class="themeSwitcherBackground ease-transition"></span>
                 </button>
-                <button class="menu ease-transition">
+                <button class="menu menuCatalogPage ease-transition">
                     <span>Menu</span>
                     <svg class="coffeeCup" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path
@@ -148,6 +152,8 @@
             </section>
 
         </main>
+
+
         <footer id="contact-us" class="footer">
             <div class="footerLeft">
                 <h2 class="footerHeader"><span>Sip, Savor, Smile.</span><em> It’s coffee time!</em></h2>
@@ -243,8 +249,8 @@
         </footer>
 
     </div>
-    <script type="module" src="./src/scripts/main.js"></script>
 
+    <script type="module" src="./src/scripts/main.js"></script>
     <script type="module" src="./src/scripts/catalog/catalog.js"></script>
 </body>
 

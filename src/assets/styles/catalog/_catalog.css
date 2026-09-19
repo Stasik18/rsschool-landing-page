@@ -3,8 +3,7 @@
   flex-direction: column;
   align-items: center;
   gap: 40px;
-  width: 1360px;
-  margin: 0 auto 100px;
+  margin-bottom: 100px;
 
   .menuSectionHeader {
     max-width: 800px;
@@ -22,8 +21,6 @@
       display: flex;
       gap: 16px;
       list-style: none;
-      padding: 0;
-      margin: 0;
     }
 
     .menuTab {
@@ -61,16 +58,14 @@
   }
 
   .menuGrid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    display: flex;
+    flex-wrap: wrap;
     gap: 40px;
-    width: 100%;
-    list-style: none;
-    padding: 0;
-    margin: 0;
+    justify-content: center;
   }
 
   .menuCard {
+    max-width: 306px;
     display: flex;
     flex-direction: column;
     gap: 12px;

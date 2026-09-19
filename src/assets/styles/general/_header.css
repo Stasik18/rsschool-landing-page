@@ -124,6 +124,12 @@
         height: 20px;
       }
     }
+
+    .menuCatalogPage {
+      &::after {
+        transform: scaleX(1);
+      }
+    }
   }
 }
 
@@ -140,4 +146,11 @@
 
 [data-theme='dark'] .themeSwitcher:hover .sunWrapper {
   background-color: var(--color-border-inverse);
+}
+[data-theme='light'] .item::after {
+  transform: scaleX(0);
+}
+
+[data-theme='dark'] .item::after {
+  transform: scaleX(1);
 }

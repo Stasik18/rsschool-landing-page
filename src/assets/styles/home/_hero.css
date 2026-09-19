@@ -40,7 +40,7 @@
     width: 200px;
     padding: 20px 0;
     border-radius: 100px;
-    background-color: var(--color-text-inverse);
+    background-color: var(--color-bg-page);
     color: var(--color-text-primary);
     font: var(--font-action);
     cursor: pointer;
