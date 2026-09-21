@@ -1,6 +1,6 @@
 import '@/assets/styles/catalog.css'
 
-import { categories, menuItems } from '../../constant/data'
+import { CATEGORIES, MENU_ITEMS } from '../../constant/data'
 
 const tabsList = document.querySelector('.menuTabsList')
 const grid = document.querySelector('.menuGrid')
@@ -8,9 +8,8 @@ const modal = document.querySelector('.modal')
 const modalOverlay = document.querySelector('.modalOverlay')
 const modalBody = document.querySelector('.modalBody')
 // отприсовка tab меню
-tabsList.innerHTML = categories
-  .map(
-    (cat) => `
+tabsList.innerHTML = CATEGORIES.map(
+  (cat) => `
   <li>
     <button class="menuTab ease-transition" type="button" data-category="${cat.id}">
       <span class="menuTabIcon">${cat.icon}</span>
@@ -18,12 +17,10 @@ tabsList.innerHTML = categories
     </button>
   </li>
 `
-  )
-  .join('')
+).join('')
 // отрисовка карточек
 function renderCards(category) {
-  grid.innerHTML = menuItems
-    .filter((item) => item.category === category)
+  grid.innerHTML = MENU_ITEMS.filter((item) => item.category === category)
     .map(
       (item) => `
       <li data-id="${item.id}" class="menuCard ease-transition">
@@ -72,7 +69,7 @@ grid.addEventListener('click', (e) => {
   if (!currentCard) return
   console.log(currentCard)
   const id = Number(currentCard.dataset.id)
-  const item = menuItems.find((item) => item.id === id)
+  const item = MENU_ITEMS.find((item) => item.id === id)
   modalBody.innerHTML = `
    <div class="modalCard">
                     <img class="modalCardImage" src=${item.image} alt=${item.alt}>

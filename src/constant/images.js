@@ -18,8 +18,11 @@ import dessert5 from '../assets/img/dessert/dessert-5.webp'
 import dessert6 from '../assets/img/dessert/dessert-6.webp'
 import dessert7 from '../assets/img/dessert/dessert-7.webp'
 import dessert8 from '../assets/img/dessert/dessert-8.webp'
+import frappuccino from '../assets/img/cap.webp'
+import macchiato from '../assets/img/mac.webp'
+import iceCoffee from '../assets/img/cola.webp'
 
-export const images = {
+export const IMAGES_FOR_CARD = {
   coffee1,
   coffee2,
   coffee3,
@@ -40,4 +43,10 @@ export const images = {
   dessert6,
   dessert7,
   dessert8,
+}
+
+export const IMAGES_FOR_SLIDER = {
+  frappuccino,
+  macchiato,
+  iceCoffee,
 }

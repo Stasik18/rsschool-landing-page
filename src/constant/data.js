@@ -1,6 +1,6 @@
-import { images } from './images'
+import { IMAGES_FOR_CARD, IMAGES_FOR_SLIDER } from './images'
 
-export const categories = [
+export const CATEGORIES = [
   {
     id: 'coffee',
     label: 'Coffee',
@@ -283,7 +283,7 @@ export const categories = [
   },
 ]
 
-export const menuItems = [
+export const MENU_ITEMS = [
   {
     id: 1,
     category: 'coffee',
@@ -291,7 +291,7 @@ export const menuItems = [
     description:
       'Fragrant black coffee with Jameson Irish whiskey and whipped milk',
     price: 7.0,
-    image: images.coffee1,
+    image: IMAGES_FOR_CARD.coffee1,
     alt: 'Irish coffee',
   },
   {
@@ -301,7 +301,7 @@ export const menuItems = [
     description:
       'Classic coffee with milk and Kahlua liqueur under a cap of frothed milk',
     price: 7.0,
-    image: images.coffee2,
+    image: IMAGES_FOR_CARD.coffee2,
     alt: 'Kahlua coffee',
   },
   {
@@ -310,7 +310,7 @@ export const menuItems = [
     title: 'Honey raf',
     description: 'Espresso with frothed milk, cream and aromatic honey',
     price: 5.5,
-    image: images.coffee3,
+    image: IMAGES_FOR_CARD.coffee3,
     alt: 'Honey raf',
   },
   {
@@ -319,7 +319,7 @@ export const menuItems = [
     title: 'Ice cappuccino',
     description: 'Cappuccino with soft thick foam in summer version with ice',
     price: 5.0,
-    image: images.coffee4,
+    image: IMAGES_FOR_CARD.coffee4,
     alt: 'Ice cappuccino',
   },
   {
@@ -328,7 +328,7 @@ export const menuItems = [
     title: 'Espresso',
     description: 'Classic black coffee',
     price: 4.5,
-    image: images.coffee5,
+    image: IMAGES_FOR_CARD.coffee5,
     alt: 'Espresso',
   },
   {
@@ -338,7 +338,7 @@ export const menuItems = [
     description:
       'Espresso coffee with the addition of steamed milk and dense milk foam',
     price: 5.5,
-    image: images.coffee6,
+    image: IMAGES_FOR_CARD.coffee6,
     alt: 'Latte',
   },
   {
@@ -347,7 +347,7 @@ export const menuItems = [
     title: 'Latte macchiato',
     description: 'Espresso with frothed milk and chocolate',
     price: 5.5,
-    image: images.coffee7,
+    image: IMAGES_FOR_CARD.coffee7,
     alt: 'Latte macchiato',
   },
   {
@@ -356,7 +356,7 @@ export const menuItems = [
     title: 'Coffee with cognac',
     description: 'Fragrant black coffee with cognac and whipped cream',
     price: 6.5,
-    image: images.coffee8,
+    image: IMAGES_FOR_CARD.coffee8,
     alt: 'Coffee with cognac',
   },
 
@@ -367,7 +367,7 @@ export const menuItems = [
     description:
       'Fragrant black tea with the addition of tangerine, cinnamon, honey, lemon and mint',
     price: 4.5,
-    image: images.tea1,
+    image: IMAGES_FOR_CARD.tea1,
     alt: 'Moroccan',
   },
   {
@@ -376,7 +376,7 @@ export const menuItems = [
     title: 'Ginger',
     description: 'Original black tea with fresh ginger, lemon and honey',
     price: 5.0,
-    image: images.tea2,
+    image: IMAGES_FOR_CARD.tea2,
     alt: 'Ginger',
   },
   {
@@ -385,7 +385,7 @@ export const menuItems = [
     title: 'Cranberry',
     description: 'Invigorating black tea with cranberry and honey',
     price: 5.0,
-    image: images.tea3,
+    image: IMAGES_FOR_CARD.tea3,
     alt: 'Cranberry',
   },
   {
@@ -395,7 +395,7 @@ export const menuItems = [
     description:
       'Toning sweet black tea with sea buckthorn, fresh thyme and cinnamon',
     price: 5.5,
-    image: images.tea4,
+    image: IMAGES_FOR_CARD.tea4,
     alt: 'Sea buckthorn',
   },
 
@@ -406,7 +406,7 @@ export const menuItems = [
     description:
       'Philadelphia cheese with lemon zest on a light sponge cake and red currant jam',
     price: 3.5,
-    image: images.dessert1,
+    image: IMAGES_FOR_CARD.dessert1,
     alt: 'Marble cheesecake',
   },
   {
@@ -415,7 +415,7 @@ export const menuItems = [
     title: 'Red velvet',
     description: 'Layer cake with cream cheese frosting',
     price: 4.0,
-    image: images.dessert2,
+    image: IMAGES_FOR_CARD.dessert2,
     alt: 'Red velvet',
   },
   {
@@ -425,7 +425,7 @@ export const menuItems = [
     description:
       'Soft cottage cheese pancakes with sour cream and fresh berries and sprinkled with powdered sugar',
     price: 4.5,
-    image: images.dessert3,
+    image: IMAGES_FOR_CARD.dessert3,
     alt: 'Cheesecakes',
   },
   {
@@ -435,7 +435,7 @@ export const menuItems = [
     description:
       'Delicate creamy dessert in a caramel basket with wild berries',
     price: 4.0,
-    image: images.dessert4,
+    image: IMAGES_FOR_CARD.dessert4,
     alt: 'Creme brulee',
   },
   {
@@ -444,7 +444,7 @@ export const menuItems = [
     title: 'Pancakes',
     description: 'Tender pancakes with strawberry jam and fresh strawberries',
     price: 4.5,
-    image: images.dessert5,
+    image: IMAGES_FOR_CARD.dessert5,
     alt: 'Pancakes',
   },
   {
@@ -453,7 +453,7 @@ export const menuItems = [
     title: 'Honey cake',
     description: 'Classic honey cake with delicate custard',
     price: 4.5,
-    image: images.dessert6,
+    image: IMAGES_FOR_CARD.dessert6,
     alt: 'Honey cake',
   },
   {
@@ -462,7 +462,7 @@ export const menuItems = [
     title: 'Chocolate cake',
     description: 'Cake with hot chocolate filling and nuts with dried apricots',
     price: 5.5,
-    image: images.dessert7,
+    image: IMAGES_FOR_CARD.dessert7,
     alt: 'Chocolate cake',
   },
   {
@@ -472,7 +472,37 @@ export const menuItems = [
     description:
       'A combination of thin sponge cake with cherry jam and light chocolate mousse',
     price: 6.5,
-    image: images.dessert8,
+    image: IMAGES_FOR_CARD.dessert8,
     alt: 'Black forest',
+  },
+]
+
+export const SLIDES = [
+  {
+    id: 1,
+    title: 'S’mores Frappuccino',
+    description:
+      'This new drink takes an espresso and mixes it with brown sugar and cinnamon before being topped with oat milk.',
+    price: 5.5,
+    image: `${IMAGES_FOR_SLIDER.frappuccino}`,
+    alt: 'S’mores Frappuccino',
+  },
+  {
+    id: 2,
+    title: 'Caramel Macchiato',
+    description:
+      'Fragrant and unique classic espresso with rich caramel-peanut syrup, with cream under whipped thick foam.',
+    price: 5.0,
+    image: `${IMAGES_FOR_SLIDER.macchiato}`,
+    alt: 'Caramel Macchiato',
+  },
+  {
+    id: 3,
+    title: 'Ice coffee',
+    description:
+      'A popular summer drink that tones and invigorates. Prepared from coffee, milk and ice.',
+    price: 4.5,
+    image: `${IMAGES_FOR_SLIDER.iceCoffee}`,
+    alt: 'Ice coffee',
   },
 ]
