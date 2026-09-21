@@ -1,5 +1,5 @@
 import '@/assets/styles/catalog.css'
-
+import { isTablet, sliceGridItems } from './pagination'
 import { CATEGORIES, MENU_ITEMS } from '../../constant/data'
 
 const tabsList = document.querySelector('.menuTabsList')
@@ -7,6 +7,13 @@ const grid = document.querySelector('.menuGrid')
 const modal = document.querySelector('.modal')
 const modalOverlay = document.querySelector('.modalOverlay')
 const modalBody = document.querySelector('.modalBody')
+const refreshBtn = document.querySelector('.refresh')
+let offset = 0
+
+const filterCategory = (category) => {
+  return MENU_ITEMS.filter((item) => item.category === category)
+}
+
 // отприсовка tab меню
 tabsList.innerHTML = CATEGORIES.map(
   (cat) => `
@@ -18,9 +25,16 @@ tabsList.innerHTML = CATEGORIES.map(
   </li>
 `
 ).join('')
+
 // отрисовка карточек
 function renderCards(category) {
-  grid.innerHTML = MENU_ITEMS.filter((item) => item.category === category)
+  const allCount = filterCategory(category)
+  const items = sliceGridItems(allCount, offset)
+
+  const shouldHideRefresh = allCount.length <= 4
+  refreshBtn.hidden = shouldHideRefresh
+
+  grid.innerHTML = items
     .map(
       (item) => `
       <li data-id="${item.id}" class="menuCard ease-transition">
@@ -33,9 +47,16 @@ function renderCards(category) {
     )
     .join('')
 }
+
 // дефолт
-renderCards('coffee')
-tabsList.querySelector('.menuTab').classList.add('menuTabActive')
+const saved = localStorage.getItem('category')
+const category = saved || 'coffee'
+
+tabsList.querySelectorAll('.menuTab').forEach((tab) => {
+  tab.classList.toggle('menuTabActive', tab.dataset.category === category)
+})
+renderCards(category)
+
 // переключение подразделов
 tabsList.addEventListener('click', (e) => {
   const btn = e.target.closest('.menuTab')
@@ -44,11 +65,15 @@ tabsList.addEventListener('click', (e) => {
   tabsList
     .querySelectorAll('.menuTab')
     .forEach((b) => b.classList.remove('menuTabActive'))
-  btn.classList.add('menuTabActive')
 
+  btn.classList.add('menuTabActive')
+  localStorage.setItem('category', btn.dataset.category)
+
+  offset = 0
   renderCards(btn.dataset.category)
 })
 
+// модалка
 const openModal = () => {
   modal.hidden = false
   modal.inert = false
@@ -99,7 +124,7 @@ grid.addEventListener('click', (e) => {
                         </div>
 
                         <div class="modalCardGroup">
-                            <span class="modalCardLabel" ">Additives</span>
+                            <span class="modalCardLabel">Additives</span>
                             <ul class="modalCardOptions">
                                 <li><button class="modalOption ease-transition modalOptionActive" type="button">
                                         <span class="modalOptionKey">1</span>Sugar</button>
@@ -144,14 +169,27 @@ modal.addEventListener('click', (e) => {
   }
 
   const sizeBtn = e.target.closest('.modalOption')
-  const group = sizeBtn.closest('.modalCardOptions')
-  console.log(sizeBtn)
+
   if (sizeBtn) {
+    const group = sizeBtn.closest('.modalCardOptions')
     group
-      .closest('.modalCardOptions')
       .querySelectorAll('.modalOption')
       .forEach((elem) => elem.classList.remove('modalOptionActive'))
 
     sizeBtn.classList.add('modalOptionActive')
   }
 })
+
+if (refreshBtn) {
+  refreshBtn.addEventListener('click', () => {
+    if (!isTablet()) return
+
+    const all = filterCategory(localStorage.getItem('category') || 'coffee')
+    offset = (offset + 4) % all.length
+    renderCards(localStorage.getItem('category') || 'coffee')
+  })
+
+  window.addEventListener('resize', () => {
+    renderCards(localStorage.getItem('category') || 'coffee')
+  })
+}
