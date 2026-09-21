@@ -7,7 +7,7 @@ const grid = document.querySelector('.menuGrid')
 const modal = document.querySelector('.modal')
 const modalOverlay = document.querySelector('.modalOverlay')
 const modalBody = document.querySelector('.modalBody')
-
+// отприсовка tab меню
 tabsList.innerHTML = categories
   .map(
     (cat) => `
@@ -20,7 +20,7 @@ tabsList.innerHTML = categories
 `
   )
   .join('')
-
+// отрисовка карточек
 function renderCards(category) {
   grid.innerHTML = menuItems
     .filter((item) => item.category === category)
@@ -36,10 +36,10 @@ function renderCards(category) {
     )
     .join('')
 }
-
+// дефолт
 renderCards('coffee')
 tabsList.querySelector('.menuTab').classList.add('menuTabActive')
-
+// переключение подразделов
 tabsList.addEventListener('click', (e) => {
   const btn = e.target.closest('.menuTab')
   if (!btn) return
@@ -57,12 +57,14 @@ const openModal = () => {
   modal.inert = false
   modal.classList.add('isOpen')
   modalOverlay.classList.add('isOpenOverlay')
+  document.body.style.overflow = 'hidden'
 }
 const closedModal = () => {
   modal.hidden = true
   modal.inert = true
   modal.classList.remove('isOpen')
   modalOverlay.classList.remove('isOpenOverlay')
+  document.body.style.overflow = ''
 }
 
 grid.addEventListener('click', (e) => {

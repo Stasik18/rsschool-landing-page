@@ -1,13 +1,17 @@
 .heroSection {
   position: relative;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 40px;
-  padding: 100px 730px 100px 100px;
+  padding: 100px;
   margin: 0 auto 100px;
   overflow: hidden;
   border-radius: 40px;
+
+  @media (max-width: 1080px) {
+    padding: 100px 60px;
+  }
+
+  @media (max-width: 480px) {
+    padding: 60px 16px;
+  }
 
   .heroSectionVideo {
     position: absolute;
@@ -18,49 +22,64 @@
     z-index: -1;
   }
 
-  .title {
-    color: var(--color-text-inverse);
-    font: var(--font-h1-accent);
-
-    & em {
-      color: var(--color-text-accent);
-    }
-  }
-
-  .about {
-    color: var(--color-text-inverse);
-    font: var(--font-body-medium);
-  }
-
-  .heroButton {
-    position: relative;
+  .heroSectionWrapper {
+    max-width: 530px;
     display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 200px;
-    padding: 20px 0;
-    border-radius: 100px;
-    background-color: var(--color-bg-page);
-    color: var(--color-text-primary);
-    font: var(--font-action);
-    cursor: pointer;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 40px;
 
-    .heroButtonIcon {
-      position: absolute;
-      right: 65px;
-      width: 20px;
-      height: 20px;
-      opacity: 0;
-      transform: translateX(12px);
+    .title {
+      color: var(--color-text-inverse);
+      font: var(--font-h1-accent);
+
+      @media (max-width: 580px) {
+        font: var(--font-h1-m);
+      }
+      & em {
+        color: var(--color-text-accent);
+
+        @media (max-width: 580px) {
+          font: var(--font-h1-m);
+        }
+      }
     }
 
-    &:hover .heroButtonText {
-      transform: translateX(-14px);
+    .about {
+      color: var(--color-text-inverse);
+      font: var(--font-body-medium);
     }
 
-    &:hover .heroButtonIcon {
-      opacity: 1;
-      transform: translateX(0);
+    .heroButton {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 200px;
+      padding: 20px 0;
+      border-radius: 100px;
+      background-color: var(--color-bg-page);
+      color: var(--color-text-primary);
+      font: var(--font-action);
+      cursor: pointer;
+
+      .heroButtonIcon {
+        position: absolute;
+        right: 65px;
+        width: 20px;
+        height: 20px;
+        opacity: 0;
+        transform: translateX(12px);
+      }
+
+      &:hover .heroButtonText {
+        transform: translateX(-14px);
+      }
+
+      &:hover .heroButtonIcon {
+        opacity: 1;
+        transform: translateX(0);
+      }
     }
   }
 }

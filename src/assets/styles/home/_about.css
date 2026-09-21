@@ -10,9 +10,17 @@
     font: var(--font-h2);
     letter-spacing: -0.004em;
 
+    @media (max-width: 480px) {
+      font: var(--font-h2-m);
+    }
+
     & em {
       color: var(--color-text-accent);
       font: var(--font-h2-accent);
+
+      @media (max-width: 480px) {
+        font: var(--font-h2-m);
+      }
     }
   }
 
@@ -20,6 +28,12 @@
     display: flex;
     gap: 40px;
     max-height: 1060px;
+
+    .aboutSectionWrapper-right {
+      @media (max-width: 1080px) {
+        display: none;
+      }
+    }
 
     .aboutSectionWrapper-left,
     .aboutSectionWrapper-right {
@@ -47,8 +61,17 @@
         display: block;
       }
     }
+
+    .aboutSectionWrapper-right {
+      @media (max-width: 1080px) {
+        display: none;
+      }
+    }
     .aboutSectionWrapper-left .aboutCard:first-child {
       flex: 1.37;
+      @media (max-width: 1080px) {
+        flex: 1;
+      }
     }
     .aboutSectionWrapper-left .aboutCard:last-child {
       flex: 1;

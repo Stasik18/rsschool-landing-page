@@ -5,6 +5,10 @@
   gap: 100px;
   margin-bottom: 100px;
 
+  @media (max-width: 780px) {
+    flex-direction: column;
+  }
+
   .appSectionInfo {
     display: flex;
     flex-direction: column;
@@ -15,9 +19,17 @@
   .appSectionHeader {
     font: var(--font-h2);
 
+    @media (max-width: 480px) {
+      font: var(--font-h2-m);
+    }
+
     & em {
       color: var(--color-text-accent);
       font: var(--font-h2-accent);
+
+      @media (max-width: 480px) {
+        font: var(--font-h2-m);
+      }
     }
   }
 
@@ -28,6 +40,7 @@
   .appSectionButtons {
     display: flex;
     gap: 20px;
+    flex-wrap: wrap;
   }
 
   .appButton {
@@ -74,10 +87,9 @@
   }
 
   .appSectionPictures {
-    flex-shrink: 0;
-
     .phone {
       display: block;
+      width: 100%;
       max-width: 630px;
       height: auto;
     }
