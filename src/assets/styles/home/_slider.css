@@ -1,0 +1,137 @@
+.sliderSection {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  margin-bottom: 100px;
+
+  .sliderHeader {
+    text-align: center;
+    font: var(--font-h2);
+
+    @media (max-width: 480px) {
+      font: var(--font-h2-m);
+    }
+
+    & em {
+      color: var(--color-text-accent);
+      font: var(--font-h2-accent);
+
+      @media (max-width: 480px) {
+        font: var(--font-h2-m);
+      }
+    }
+  }
+
+  .sliderWrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+    width: 100%;
+
+    @media (max-width: 680px) {
+      justify-content: center;
+    }
+
+    .sliderButton {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border: 1px solid var(--color-border-primary);
+      border-radius: 100px;
+      background-color: transparent;
+      width: 60px;
+      height: 60px;
+      cursor: pointer;
+
+      @media (max-width: 680px) {
+        display: none;
+      }
+
+      &:focus-visible {
+        outline: 2px solid currentColor;
+        outline-offset: 4px;
+      }
+
+      &:hover {
+        background-color: var(--color-border-inverse);
+        color: var(--color-text-inverse);
+      }
+      & svg {
+        width: 24px;
+        height: 24px;
+      }
+    }
+
+    .sliderTrack {
+      overflow-x: hidden;
+      max-width: 480px;
+      width: 100%;
+
+      .slideList {
+        display: flex;
+        width: 100%;
+
+        .slide {
+          display: flex;
+          flex-direction: column;
+          flex: 0 0 100%;
+          justify-content: space-between;
+          align-items: center;
+          gap: 20px;
+          max-width: 480px;
+
+          .slidePictures {
+          }
+
+          .slideInfo {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            gap: 16px;
+
+            .slideInfoHeader {
+              font: var(--font-h3);
+            }
+
+            .slideInfoAbout {
+              font: var(--font-body-medium);
+              text-align: center;
+            }
+
+            .slideInfoPrice {
+              font: var(--font-h3);
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .sliderPagination {
+    .lineList {
+      display: flex;
+      gap: 12px;
+
+      .line {
+        height: 4px;
+        width: 40px;
+        border-radius: 100px;
+        background-color: var(--color-border-primary);
+        cursor: pointer;
+
+        &:focus-visible {
+          outline: 2px solid currentColor;
+          outline-offset: 4px;
+        }
+      }
+
+      .active {
+        background-color: var(--color-bg-container);
+      }
+    }
+  }
+}

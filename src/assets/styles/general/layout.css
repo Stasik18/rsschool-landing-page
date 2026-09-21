@@ -1,0 +1,13 @@
+.mainWrapper {
+  max-width: 1440px;
+  width: 100%;
+  margin: 0 auto;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  padding: 20px 40px;
+
+  @media (max-width: 480px) {
+    padding: 20px 16px 40px 16px;
+  }
+}

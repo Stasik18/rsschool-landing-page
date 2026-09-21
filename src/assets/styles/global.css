@@ -1,0 +1,12 @@
+@import './general/fonts.css';
+@import './general/reset.css';
+@import './general/variables.css';
+@import './general/layout.css';
+@import './general/utils.css';
+@import './general/_header.css';
+@import './general/_footer.css';
+@import './general/_mobile-menu.css';
+
+html {
+  scroll-behavior: smooth;
+}
