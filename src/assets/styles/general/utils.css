@@ -8,6 +8,7 @@
     outline var(--transition-duration) var(--transition-timing),
     transform var(--transition-duration) var(--transition-timing),
     opacity var(--transition-duration) var(--transition-timing),
+    outline var(--transition-duration) var(--transition-timing),
     transform-origin var(--transition-duration) var(--transition-timing);
 }
 

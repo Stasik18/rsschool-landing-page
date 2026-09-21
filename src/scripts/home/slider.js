@@ -12,7 +12,7 @@ let startX = 0
 slideList.innerHTML = SLIDES.map(
   (item) => `  <article class="slide ">
                 <img class="slidePictures" width="480" height="480" src="${item.image}"
-                  alt="${item.alt}">
+                  alt="${item.alt} loading="lazy"">
                 <div class="slideInfo">
                   <h3 class="slideInfoHeader">${item.title}</h3>
                   <p class="slideInfoAbout">${item.description}</p>

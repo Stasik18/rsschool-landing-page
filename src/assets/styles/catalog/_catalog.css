@@ -43,6 +43,23 @@
       font: var(--font-action);
       cursor: pointer;
 
+      &:hover {
+        background-color: var(--color-bg-container);
+        border-color: var(--color-bg-container);
+        color: var(--color-text-inverse);
+      }
+
+      &:hover .menuTabIcon {
+        background-color: var(--color-bg-page);
+      }
+
+      &:focus-visible {
+        outline: none;
+        box-shadow:
+          0 0 0 4px var(--color-bg-page),
+          0 0 0 6px var(--color-border-primary);
+      }
+
       .menuTabIcon {
         width: 30px;
         height: 30px;
@@ -113,6 +130,28 @@
     .menuCardPrice {
       padding: 0 20px;
       font: var(--font-h3);
+    }
+  }
+
+  .refresh {
+    width: 60px;
+    height: 60px;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--color-border-primary);
+    border-radius: 100px;
+    background: transparent;
+    color: var(--color-text-primary);
+    font: var(--font-action);
+    cursor: pointer;
+
+    @media (max-width: 768px) {
+      display: flex;
+    }
+
+    &[hidden] {
+      display: none;
     }
   }
 }

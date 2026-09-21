@@ -63,6 +63,11 @@
       font: var(--font-action);
       cursor: pointer;
 
+      &:focus-visible {
+        outline: 4px solid var(--color-bg-page);
+        outline-offset: 4px;
+      }
+
       .heroButtonIcon {
         position: absolute;
         right: 65px;

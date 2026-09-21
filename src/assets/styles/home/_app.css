@@ -44,12 +44,8 @@
   }
 
   .appButton {
-    display: inline-block;
     text-decoration: none;
     color: var(--color-text-primary);
-  }
-
-  .appButtonInner {
     display: flex;
     align-items: center;
     gap: 8px;
@@ -59,39 +55,46 @@
     background: transparent;
     color: inherit;
     cursor: pointer;
-  }
 
-  .appButtonIcon {
-    width: 36px;
-    height: 36px;
-    flex-shrink: 0;
-  }
-
-  .appButtonText {
-    display: flex;
-    flex-direction: column;
-    line-height: 1.1;
-    text-align: left;
-
-    small {
-      font: var(--font-caption);
+    &:focus-visible {
+      outline: none;
+      box-shadow:
+        0 0 0 4px var(--color-bg-page),
+        0 0 0 6px currentColor;
     }
-    strong {
-      font: var(--font-action);
+
+    &:hover {
+      background-color: var(--color-bg-container);
+      color: var(--color-text-inverse);
+    }
+
+    .appSectionPictures {
+      .phone {
+        display: block;
+        width: 100%;
+        max-width: 630px;
+        height: auto;
+      }
     }
   }
+}
 
-  .appButton:hover .appButtonInner {
-    background-color: var(--color-bg-container);
-    color: var(--color-text-inverse);
+.appButtonIcon {
+  width: 36px;
+  height: 36px;
+  flex-shrink: 0;
+}
+
+.appButtonText {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.1;
+  text-align: left;
+
+  small {
+    font: var(--font-caption);
   }
-
-  .appSectionPictures {
-    .phone {
-      display: block;
-      width: 100%;
-      max-width: 630px;
-      height: auto;
-    }
+  strong {
+    font: var(--font-action);
   }
 }

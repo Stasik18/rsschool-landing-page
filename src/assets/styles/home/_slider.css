@@ -50,6 +50,11 @@
         display: none;
       }
 
+      &:focus-visible {
+        outline: 2px solid currentColor;
+        outline-offset: 4px;
+      }
+
       &:hover {
         background-color: var(--color-border-inverse);
         color: var(--color-text-inverse);
@@ -68,6 +73,7 @@
       .slideList {
         display: flex;
         width: 100%;
+
         .slide {
           display: flex;
           flex-direction: column;
@@ -109,12 +115,18 @@
     .lineList {
       display: flex;
       gap: 12px;
+
       .line {
         height: 4px;
         width: 40px;
         border-radius: 100px;
         background-color: var(--color-border-primary);
         cursor: pointer;
+
+        &:focus-visible {
+          outline: 2px solid currentColor;
+          outline-offset: 4px;
+        }
       }
 
       .active {

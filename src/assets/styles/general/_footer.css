@@ -58,14 +58,20 @@
     border-radius: 100px;
     color: var(--color-text-inverse);
 
-    svg {
-      width: 24px;
-      height: 24px;
+    &:focus-visible {
+      outline: none;
+      box-shadow:
+        0 0 0 4px var(--color-bg-container),
+        0 0 0 6px var(--color-border-primary);
     }
 
     &:hover {
       background-color: var(--color-text-inverse);
       color: var(--color-bg-container);
+    }
+    svg {
+      width: 24px;
+      height: 24px;
     }
   }
 
@@ -93,6 +99,11 @@
     width: fit-content;
     align-items: center;
     gap: 8px;
+
+    &:has(.footerContactsLink:focus-visible)::after {
+      outline: none;
+      transform: scaleX(1);
+    }
 
     &::after {
       content: '';
@@ -122,5 +133,11 @@
     color: var(--color-text-inverse);
     text-decoration: none;
     font: var(--font-body-medium);
+  }
+
+  .footerContactsLink {
+    &:focus-visible {
+      outline: none;
+    }
   }
 }
