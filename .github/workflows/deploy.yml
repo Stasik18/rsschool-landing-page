@@ -2,7 +2,7 @@ name: Deploy to GitHub Pages
 
 on:
   push:
-    branches: [landing-page] # ветка
+    branches: [landing-page-part-2] # ветка
 
 permissions:
   contents: read
