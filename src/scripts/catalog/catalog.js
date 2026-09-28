@@ -1,12 +1,17 @@
 import '@/assets/styles/catalog.css'
-import { isTablet, sliceGridItems } from './pagination'
+import {
+  getVisibleItems,
+  shouldShowRefresh,
+  createResizeHandler,
+} from './pagination'
 import { CATEGORIES, MENU_ITEMS } from '../../constant/data'
 import { openModal } from './modal'
 
 const tabsList = document.querySelector('.menuTabsList')
 const grid = document.querySelector('.menuGrid')
 const refreshBtn = document.querySelector('.refresh')
-let offset = 0
+let isExpanded = false
+let currentCategory = 'coffee'
 
 const filterCategory = (category) => {
   return MENU_ITEMS.filter((item) => item.category === category)
@@ -27,10 +32,10 @@ tabsList.innerHTML = CATEGORIES.map(
 // отрисовка карточек
 function renderCards(category) {
   const allCount = filterCategory(category)
-  const items = sliceGridItems(allCount, offset)
 
-  const shouldHideRefresh = allCount.length <= 4
-  refreshBtn.hidden = shouldHideRefresh
+  const items = getVisibleItems(allCount, isExpanded)
+
+  refreshBtn.hidden = !shouldShowRefresh(allCount, isExpanded)
 
   grid.innerHTML = items
     .map(
@@ -46,14 +51,14 @@ function renderCards(category) {
     .join('')
 }
 
-// дефолт
-const saved = localStorage.getItem('category')
-const category = saved || 'coffee'
-
+// первое открытие
 tabsList.querySelectorAll('.menuTab').forEach((tab) => {
-  tab.classList.toggle('menuTabActive', tab.dataset.category === category)
+  tab.classList.toggle(
+    'menuTabActive',
+    tab.dataset.category === currentCategory
+  )
 })
-renderCards(category)
+renderCards(currentCategory)
 
 // переключение подразделов
 tabsList.addEventListener('click', (e) => {
@@ -65,12 +70,12 @@ tabsList.addEventListener('click', (e) => {
     .forEach((b) => b.classList.remove('menuTabActive'))
 
   btn.classList.add('menuTabActive')
-  localStorage.setItem('category', btn.dataset.category)
+  currentCategory = btn.dataset.category
+  isExpanded = false
 
-  offset = 0
   renderCards(btn.dataset.category)
 })
-
+// открытие модалки
 grid.addEventListener('click', (e) => {
   const card = e.target.closest('.menuCard')
   if (!card) return
@@ -78,16 +83,14 @@ grid.addEventListener('click', (e) => {
   openModal(item)
 })
 
+// показать ещё + задержка к ресайзу
 if (refreshBtn) {
   refreshBtn.addEventListener('click', () => {
-    if (!isTablet()) return
-
-    const all = filterCategory(localStorage.getItem('category') || 'coffee')
-    offset = (offset + 4) % all.length
-    renderCards(localStorage.getItem('category') || 'coffee')
+    isExpanded = true
+    renderCards(currentCategory)
   })
-
-  window.addEventListener('resize', () => {
-    renderCards(localStorage.getItem('category') || 'coffee')
-  })
+  window.addEventListener(
+    'resize',
+    createResizeHandler(() => renderCards(currentCategory))
+  )
 }
