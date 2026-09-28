@@ -22,7 +22,7 @@ tabsList.innerHTML = CATEGORIES.map(
   (cat) => `
   <li>
     <button class="menuTab ease-transition" type="button" data-category="${cat.id}">
-      <span class="menuTabIcon">${cat.icon}</span>
+      <span class="menuTabIcon ease-transition">${cat.icon}</span>
       <span>${cat.label}</span>
     </button>
   </li>
@@ -43,7 +43,7 @@ function renderCards(category) {
       <li data-id="${item.id}" class="menuCard ease-transition">
         <img class="menuCardImage" src="${item.image}" alt="${item.alt}">
         <h3 class="menuCardTitle">${item.title}</h3>
-        <p class="menuCardDesc">${item.description}</p>
+        <p class="menuCardDesc ease-transition">${item.description}</p>
         <span class="menuCardPrice">$${item.price.toFixed(2)}</span>
       </li>
     `
