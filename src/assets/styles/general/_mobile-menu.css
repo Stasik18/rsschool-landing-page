@@ -9,10 +9,12 @@
   gap: 100px;
   padding: 60px 40px;
   background-color: var(--color-bg-page);
+  transform: translateX(-100%);
   opacity: 0;
   visibility: hidden;
 
   &.isOpen {
+    transform: translateX(0);
     opacity: 1;
     visibility: visible;
   }

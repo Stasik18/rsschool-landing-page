@@ -1,0 +1,67 @@
+@media (max-width: 768px) {
+  a,
+  [role='button'],
+  .burger,
+  .menuTab,
+  .sliderButton,
+  .line,
+  .modalOption,
+  .modalClose,
+  .refresh,
+  .themeSwitcher,
+  .heroButton,
+  .menuCard,
+  .aboutCardImage,
+  .menuCardImage {
+    cursor: default !important;
+  }
+
+  .appButton:hover,
+  .menuCard:hover .menuCardImage,
+  .menuCardImage:hover,
+  .aboutCardImage:hover,
+  .burger:hover,
+  .menuTab:hover,
+  .sliderButton:hover,
+  .line:hover,
+  .modalClose:hover,
+  .refresh:hover,
+  .themeSwitcher:hover,
+  .menu:hover,
+  .item:hover::after,
+  .footerSocialLink:hover,
+  .footerContactsItem:hover,
+  .sunWrapper:hover,
+  .logo:hover,
+  [data-theme='dark'] .themeSwitcher:hover .sunWrapper,
+  [data-theme='light'] .themeSwitcher:hover .moonWrapper {
+    background-color: transparent !important;
+    color: inherit !important;
+    transform: none !important;
+    box-shadow: none !important;
+    border-color: inherit !important;
+  }
+
+  .item:hover::after,
+  .menu:hover::after,
+  .footerContactsItem:hover::after {
+    transform: scaleX(0) !important;
+  }
+
+  .heroButton:hover .heroButtonText {
+    transform: none !important;
+  }
+
+  .modalCard .modalOption:hover {
+    background-color: transparent !important;
+    color: var(--color-text-primary) !important;
+    border-color: var(--color-border-primary) !important;
+  }
+
+  .modalCard .modalOptionActive,
+  .modalCard .modalOptionActive:hover {
+    background-color: var(--color-bg-container) !important;
+    color: var(--color-text-inverse) !important;
+    border-color: var(--color-bg-container) !important;
+  }
+}

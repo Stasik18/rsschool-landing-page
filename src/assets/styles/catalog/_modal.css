@@ -44,27 +44,29 @@
   .modalCard {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 40px;
-    padding: 40px;
+    padding: 16px;
 
-    @media (max-width: 580px) {
+    @media (max-width: 760px) {
       display: flex;
       flex-direction: column;
     }
 
-    @media (max-width: 480px) {
-      padding: 16px;
-    }
+    .modalCardImageWrapper {
+      overflow: hidden;
+      flex-shrink: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
 
-    .modalCardImage {
-      min-width: 100%;
-      height: auto;
-      object-fit: cover;
-      border-radius: 40px;
-      display: block;
-
-      @media (max-width: 480px) {
-        display: none;
+      .modalCardImage {
+        width: 310px;
+        height: 310px;
+        object-fit: cover;
+        display: block;
+        border-radius: 40px;
+        @media (max-width: 480px) {
+          display: none;
+        }
       }
     }
 
