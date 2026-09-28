@@ -42,7 +42,7 @@ function renderCards(category) {
       (item) => `
       <li data-id="${item.id}" class="menuCard ease-transition">
         <img class="menuCardImage" src="${item.image}" alt="${item.alt}">
-        <h3 class="menuCardTitle">${item.title}</h3>
+        <h2 class="menuCardTitle">${item.title}</h2>
         <p class="menuCardDesc ease-transition">${item.description}</p>
         <span class="menuCardPrice">$${item.price.toFixed(2)}</span>
       </li>

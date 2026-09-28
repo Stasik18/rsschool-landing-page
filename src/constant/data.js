@@ -24,7 +24,7 @@ export const CATEGORIES = [
       <stop offset="1" stop-color="#d4d1c9"/>
     </linearGradient>
 
-    <filter id="shadow" x="-30%" y="-30%" width="160%" height="160%">
+    <filter id="shadow-coffee" x="-30%" y="-30%" width="160%" height="160%">
       <feGaussianBlur stdDeviation="5"/>
     </filter>
 
@@ -157,7 +157,7 @@ export const CATEGORIES = [
       <stop offset="1" stop-color="#d5d5cf"/>
     </linearGradient>
 
-    <filter id="shadow" x="-30%" y="-30%" width="160%" height="160%">
+    <filter id="shadow-tea" x="-30%" y="-30%" width="160%" height="160%">
       <feGaussianBlur stdDeviation="5"/>
     </filter>
   </defs>
